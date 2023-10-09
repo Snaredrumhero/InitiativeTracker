@@ -28,7 +28,7 @@ namespace InitiativeTracker
             List<Player> Players = new List<Player>();
         }
 
-        private void Refresh_Button_OnClick(object sender, RoutedEventArgs e)
+        private void NextTurn_Button_OnClick(object sender, RoutedEventArgs e)
         {
             if (sender is not Button b)
             {
@@ -48,6 +48,16 @@ namespace InitiativeTracker
         {
             
             //When I see the window (after it appears, this runs)
+        }
+
+        private void LoadButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void RefreshButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
