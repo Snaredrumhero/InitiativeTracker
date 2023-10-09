@@ -25,6 +25,7 @@ namespace InitiativeTracker
             InitializeComponent();
             // Before I see the window
             // Additional code is below me!
+            List<Player> Players = new List<Player>();
         }
 
         private void Refresh_Button_OnClick(object sender, RoutedEventArgs e)

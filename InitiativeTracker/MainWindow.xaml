@@ -25,13 +25,49 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="3" Grid.Row="3" 
-                Content="Refresh" FontSize="50" FontFamily="Comic Sans MS"
+        <Button Grid.Column="5" Grid.Row="1" 
+                Content="Refresh" FontSize="15" FontFamily="Comic Sans MS"
                 Name="RefreshButton" Click="Refresh_Button_OnClick"
                 />
         <TextBox Grid.Column="3"  Grid.Row="5"
                  Name="InstructionTextBox"
-                   TextChanged="InstructionTextBox_OnTextChanged"/>
+                 TextChanged="InstructionTextBox_OnTextChanged"/>
+
+        <!-- Subgrid of control buttons!-->
+        <Grid Grid.Column="3" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <!--Subgrid of initiative information!-->
+        <Grid Grid.Column="3" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        </Grid>
     </Grid>
 
 </Window>
