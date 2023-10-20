@@ -26,13 +26,13 @@
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="5" Grid.Row="1" 
-                Content="Next Turn" FontSize="*" FontFamily="Arial"
-                Name="NextTurnButton" Click="NextTurn_Button_OnClick"
-                />
-        <TextBox Grid.Column="3"  Grid.Row="5"
-                 Name="InstructionTextBox"
-                 TextChanged="InstructionTextBox_OnTextChanged"/>
-
+                Content="Next Turn" FontSize="15" FontFamily="Arial"
+                Name="NextTurnButton" Click="NextTurn_Button_OnClick"/>
+        <Label Grid.Column="1"  Grid.Row="1" Content="Round: 1"
+               VerticalAlignment="Center" HorizontalAlignment="Center"
+               Name="TotalTurnsLabel"/>
+        <TextBox Grid.Column="3" Grid.Row="5" Background="LightGray"
+                 Name="NotesTextBox"/>
         <!-- Subgrid of control buttons!-->
         <Grid Grid.Column="3" Grid.Row="1">
             <Grid.RowDefinitions>
@@ -46,10 +46,10 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="5"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" Grid.Row="1"
+            <Button Grid.Column="1" Grid.Row="1" FontSize="25"
                     Content="Load Party" Name="LoadButton"
                     Click="LoadButton_OnClick"/>
-            <Button Grid.Column="2" Grid.Row="1"
+            <Button Grid.Column="2" Grid.Row="1" FontSize="25"
                     Content="Refresh" Name="RefreshButton"
                     Click="RefreshButton_OnClick"/>
         </Grid>
@@ -70,6 +70,52 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="1" Grid.Row="1" Content="Held?" FontSize="5"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="1" Content="Initiative" FontSize="5"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="1" Content="Character Name" FontSize="10"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Column="2" Grid.Row="2"/>
+                <CheckBox Grid.Column="1" Grid.Row="2" Name="HeldCheckbox"/>
+
+            </Grid>
+
         </Grid>
     </Grid>
 

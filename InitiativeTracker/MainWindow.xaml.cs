@@ -34,14 +34,9 @@ namespace InitiativeTracker
             {
                 throw new Exception("Fuck!");
             }
-
             b.Background = Brushes.Yellow;
-            
-        }
+            TotalTurnsLabel.Content = "Round";
 
-        private void InstructionTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
-        {
-            InstructionTextBox.Background = Brushes.Aqua;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -61,3 +56,4 @@ namespace InitiativeTracker
         }
     }
 }
+    
