@@ -1,0 +1,34 @@
+[
+  {
+    "Initiative": 0,
+    "CurrentHealth": 0,
+    "MaxHealth": 0,
+    "ArmorClass": 0,
+    "Name": "",
+    "Notes": ""
+  },
+  {
+    "Initiative": 5,
+    "CurrentHealth": 5,
+    "MaxHealth": 5,
+    "ArmorClass": 5,
+    "Name": "Candace",
+    "Notes": "Tech Specialist"
+  },
+  {
+    "Initiative": 10,
+    "CurrentHealth": 10,
+    "MaxHealth": 10,
+    "ArmorClass": 10,
+    "Name": "Kang",
+    "Notes": "Monk Goliath"
+  },
+  {
+    "Initiative": 15,
+    "CurrentHealth": 15,
+    "MaxHealth": 15,
+    "ArmorClass": 15,
+    "Name": "Drew Mullett",
+    "Notes": "Fucking crazy"
+  }
+]

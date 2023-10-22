@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gnmBCupluhz064FTeIw9ia5xSJ/uh8F28oCpLukZmiA+TiGU+gNwy0peCyxVuLhii7h2rSjyV1iut/LqUxvUug==",
+  "dgSpecHash": "8FLCKbd3sVIuzPv6cizp91mbMH5w0O0Aw8RyRRB34JwLAa/nTrnZNCamtxR5Hiy2GTnnBRLnSPYwVRWdLJGU5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\dm247120\\source\\repos\\InitiativeTracker\\InitiativeTracker\\InitiativeTracker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dm247120\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
