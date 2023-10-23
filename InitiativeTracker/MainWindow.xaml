@@ -94,11 +94,16 @@
                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 <Label Grid.Column="3" Grid.Row="1" Content="Character Name" FontSize="10"
                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                <Label Grid.Column="4" Grid.Row="1" Content="Current HP" 
+                <Label Grid.Column="4" Grid.Row="1" Content="AC"
                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                <Label Grid.Column="5" Grid.Row="1" Content="Max HP" 
+                <Label Grid.Column="5" Grid.Row="1" Content="Current HP" 
                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
-
+                <Label Grid.Column="6" Grid.Row="1" Content="Max HP" 
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Label Grid.Column="7" Grid.Row="1" Content="Damage"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Label Grid.Column="8" Grid.Row="1" Content="Confirm Damage"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -122,7 +127,11 @@
                           VerticalAlignment="Center" />
                 <TextBox Grid.Column="2" Grid.Row="1"/>
                 <TextBox Grid.Column="3" Grid.Row="1"/>
-
+                <TextBox Grid.Column="4" Grid.Row="1"/>
+                <TextBox Grid.Column="5" Grid.Row="1"/>
+                <Label Grid.Column="6" Grid.Row="1" Content="35"/>
+                <TextBox Grid.Column="7" Grid.Row="1"/>
+                <Button Grid.Column="8" Grid.Row="1" Content="Confirm?"/>
             </Grid>
 
         </Grid>

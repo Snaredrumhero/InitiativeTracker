@@ -21,3 +21,4 @@ C:\Users\dm247120\source\repos\InitiativeTracker\InitiativeTracker\obj\Debug\net
 C:\Users\dm247120\source\repos\InitiativeTracker\InitiativeTracker\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\dm247120\source\repos\InitiativeTracker\InitiativeTracker\obj\Debug\net6.0-windows\InitiativeTracker.csproj.AssemblyReference.cache
 C:\Users\dm247120\source\repos\InitiativeTracker\InitiativeTracker\obj\Debug\net6.0-windows\InitiativeTracker.csproj.CopyComplete
+C:\Users\dm247120\source\repos\InitiativeTracker\InitiativeTracker\bin\Debug\net6.0-windows\test.json

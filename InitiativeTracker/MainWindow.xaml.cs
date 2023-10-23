@@ -41,6 +41,7 @@ namespace InitiativeTracker
             }
             b.Background = Brushes.Yellow;
             TotalTurnsLabel.Content = "Round";
+            // TODO Check if initiative has changed between the grid and the objects. If so, refresh grid
 
         }
 
@@ -78,18 +79,33 @@ namespace InitiativeTracker
             Players.AddRange(loadedPlayers);
 
             RefreshGrid();
-            //TODO Display new players
+            // TODO Display new players
         }
-
+        // Reads updated initiative, changes respective player objects and refreshes grid
         private void RefreshButton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            RefreshGrid();
+            //TODO Display new players
         }
-
+        // Reorders players in list, removes all existing values, creates new grid to store them in
         private void RefreshGrid()
         {
+            //Clear existing values
+            // https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections?view=netframeworkdesktop-4.8
+            //Compute required rows
+            int numCols = (Players.Count / 7) + 1;
+
+
+            //Create needed rows and populate with controls
+            //Set all unused rows and controls to be invisible and disabled
+            //Loop over rows and populate data
             throw new NotImplementedException();
             
+        }
+        // Highlight the player whose turn it is
+        private void HighlightPlayer()
+        {
+            throw new NotImplementedException();
         }
     }   
         
