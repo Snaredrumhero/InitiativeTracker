@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InitiativeTracker
 {
-    public class Player
+    public class Player : ICombatant
     {
         public Player(int constructInitiative = 0, int constructMaxHealth = 0, int constructArmorClass = 0, 
             string constructName = "", string constructNotes = "")
@@ -18,12 +14,31 @@ namespace InitiativeTracker
             Name = constructName;
             Notes = constructNotes;
         }
-        
-        public int Initiative;
-        public int CurrentHealth;
-        public int MaxHealth;
-        public int ArmorClass;
-        public string Name;
-        public string Notes;
+
+
+        public required int Initiative { get; set; }
+        public required int CurrentHealth { get; set; }
+        public required int TemporaryHealth { get; set; }
+        public required int MaxHealth { get; init; }
+        public required int ArmorClass { get; set; }
+        public bool IsActionHeld { get; set; }
+        public bool IsConcentrating { get; set; }
+        public string? AdditionalStateInformation { get; set; }
+        public required string Name { get; set; }
+        public string? Notes { get; set; }
+        public int Damage(int hp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Heal(int hp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GainTemporaryHealth(int hp)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -3,18 +3,9 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace InitiativeTracker
 {
@@ -25,6 +16,7 @@ namespace InitiativeTracker
     public partial class MainWindow : Window
     {
         public List<Player> Players = new List<Player>();
+        public Stack<UndoData> UndoStack;
 
         public MainWindow()
         {
@@ -78,6 +70,23 @@ namespace InitiativeTracker
             // TODO Error handling
             Players.AddRange(loadedPlayers);
 
+
+            // Testing Undo Stack
+            List<CombatantUndo> UndoPlayersList = new List<CombatantUndo>;
+            foreach (Player player in Players) 
+            {
+                if (player == null)
+                {
+                    continue;
+                }
+                CombatantUndo data = new CombatantUndo(player.Initiative, player.MaxHealth, player.TemporaryHealth, false, false);
+                UndoPlayersList.Add(data);
+            }
+            UndoData undoData = new UndoData(UndoPlayersList, 1, 3);
+            UndoStack.Push(undoData);
+
+
+
             RefreshGrid();
             // TODO Display new players
         }
@@ -94,7 +103,7 @@ namespace InitiativeTracker
             // https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections?view=netframeworkdesktop-4.8
             //Compute required rows
             int numCols = (Players.Count / 7) + 1;
-
+            
 
             //Create needed rows and populate with controls
             //Set all unused rows and controls to be invisible and disabled
@@ -107,6 +116,8 @@ namespace InitiativeTracker
         {
             throw new NotImplementedException();
         }
+
+
     }   
         
 }
