@@ -25,7 +25,7 @@ namespace InitiativeTracker
         public int GlobalTurnCounter;
 
         // Do we need to move initiative back only once or until the next major change?
-        // *We should only save when large changes occur and then' we'll just pop the stack whenever necessary*
+        // *We should only save when large changes occur and then we'll just pop the stack whenever necessary*
     }
     // Stores the condensed information of all the players
     public class CombatantUndo

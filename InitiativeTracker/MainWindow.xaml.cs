@@ -117,8 +117,15 @@ namespace InitiativeTracker
             throw new NotImplementedException();
         }
 
+        private void UndoButton_OnClick(object sender, RoutedEventArgs e)
+        {
 
-    }   
-        
-}
+        }
+
+        private void ApplyDamageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            // TODO Apply damage to all selected players
+        }
+
+    }
     

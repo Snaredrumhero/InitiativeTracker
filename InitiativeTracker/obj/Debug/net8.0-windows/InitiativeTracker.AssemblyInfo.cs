@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InitiativeTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddc48970081225648f21a6f737347f72fabe6f47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5009f9ac5190db13581b1b2ad492b7383eef455")]
 [assembly: System.Reflection.AssemblyProductAttribute("InitiativeTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InitiativeTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
