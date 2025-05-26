@@ -26,7 +26,7 @@
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="5" Grid.Row="1" 
-                Content="Next Turn" FontSize="15" FontFamily="Arial"
+                Content="Start" FontSize="15" FontFamily="Arial"
                 Name="NextTurnButton" Click="NextTurn_Button_OnClick"/>
         <Label Grid.Column="1"  Grid.Row="1" Content="Round: 1"
                VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -47,15 +47,26 @@
                 <ColumnDefinition Width="5"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="5"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" Grid.Row="1" FontSize="25"
-                    Content="Load Party" Name="LoadButton"
-                    Click="LoadButton_OnClick"/>
-            <Button Grid.Column="2" Grid.Row="1" FontSize="25"
+
+            <!--<SplitButton Grid.Column="1" Grid.Row="1" FontSize="25"
+                    Content="Load Party"/>-->
+            <Button Grid.Column="1" Grid.Row="1" FontSize="15"
+                    Content="Custom" Name="CreateCustomCombatantButton"
+                    Click="CreateCustomCombatantButton_OnClick"/>
+            <Button Grid.Column="2" Grid.Row="1" FontSize="15"
+                Content="Load Players" Name="LoadPlayersButton"
+                Click="LoadPlayersButton_OnClick"/>
+            <Button Grid.Column="3" Grid.Row="1" FontSize="15"
+                    Content="Load NPCs" Name="LoadNPCButton"
+                    Click="LoadNPCButton_OnClick"/>
+            <Button Grid.Column="4" Grid.Row="1" FontSize="25"
                     Content="Refresh" Name="RefreshButton"
                     Click="RefreshButton_OnClick"/>
-            
+
         </Grid>
         <!-- Subfrid of damage controlls!-->
         <Grid Grid.Column="5" Grid.Row="3">
@@ -76,13 +87,14 @@
             <Label Grid.Column="1" Grid.Row="1" Content="Damage"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5"
-                     Name="DamageTextBox" TextAlignment="Center" FontSize="25" FontFamily="Arial"/>
+                     Name="DamageTextBox" TextAlignment="Center" FontSize="25" FontFamily="Arial"
+                     KeyDown="DamageTextBox_KeyDown"/>
             <Button Grid.Column="1" Grid.Row="3" FontSize="10"
                     Content="Apply Damage" Name="ApplyDamageButton"
                     Click="ApplyDamageButton_OnClick"/>
 
         </Grid>
-        
+
         <!--Subgrid of initiative information!-->
         <Grid Grid.Column="3" Grid.Row="3">
             <Grid.ColumnDefinitions>

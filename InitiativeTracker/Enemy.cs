@@ -4,6 +4,16 @@ namespace InitiativeTracker;
 
 public class Enemy : ICombatant
 {
+    public Enemy(int constructInitiative = 0, int constructMaxHealth = 0, int constructArmorClass = 0,
+            string constructName = "", string constructNotes = "")
+    {
+        Initiative = constructInitiative;
+        CurrentHealth = constructMaxHealth;
+        MaxHealth = constructMaxHealth;
+        ArmorClass = constructArmorClass;
+        Name = constructName;
+        Notes = constructNotes;
+    }
     public required int Initiative { get; set; }
     public required int CurrentHealth { get; set; }
     public required int TemporaryHealth { get; set; }
