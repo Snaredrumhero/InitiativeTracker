@@ -1,7 +1,9 @@
-﻿namespace InitiativeTracker;
-
-public enum MoveResult
+﻿namespace InitiativeTracker
 {
-    Ok,
-    HeldActions,
+
+    public enum MoveResult
+    {
+        Ok,
+        HeldActions,
+    }
 }

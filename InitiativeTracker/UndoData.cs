@@ -23,12 +23,11 @@ namespace InitiativeTracker
 
         public UndoData(IEnumerable<ICombatant> constructCombatants, int constructCurrentInitiative, int constructGlobalTurnCounter)
         {
-            List<CombatantUndo> CombatantsList = new List<CombatantUndo>();
+            Combatants = new List<CombatantUndo>();
             foreach (ICombatant combatant in constructCombatants)
             {
-                CombatantsList.Add(new CombatantUndo(combatant.Initiative, combatant.MaxHealth, combatant.TemporaryHealth, combatant.IsActionHeld, combatant.IsConcentrating));
+                Combatants.Add(new CombatantUndo(combatant.Initiative, combatant.CurrentHealth, combatant.TemporaryHealth, combatant.IsActionHeld, combatant.IsConcentrating, combatant.Name));
             }
-            Combatants = CombatantsList;
             CurrentInitiative = constructCurrentInitiative;
             GlobalTurnCounter = constructGlobalTurnCounter;
         }
@@ -43,19 +42,21 @@ namespace InitiativeTracker
     // Stores the condensed information of all the players
     public class CombatantUndo
     {
-        public CombatantUndo(int constructInitiative, int constructMaxHealth, int constructTemporaryHealth, bool constructIsActionHeld, bool constructIsConcentrating) 
+        public CombatantUndo(int constructInitiative, int constructCurrentHealth, int constructTemporaryHealth, bool constructIsActionHeld, bool constructIsConcentrating, string constructName) 
         {
             Initiative = constructInitiative;
-            MaxHealth = constructMaxHealth;
+            CurrentHealth = constructCurrentHealth;
             TemporaryHealth = constructTemporaryHealth;
             IsActionHeld = constructIsActionHeld;
             IsConcentrating = constructIsConcentrating;
+            Name = constructName;
         } 
         
         public int Initiative;
-        public int MaxHealth;
+        public int CurrentHealth;
         public int TemporaryHealth;
         public bool IsActionHeld;   
         public bool IsConcentrating;
+        public string Name;
     }
 }

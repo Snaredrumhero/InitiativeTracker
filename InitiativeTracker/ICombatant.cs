@@ -9,6 +9,7 @@
         public int ArmorClass { get; set; }
         public bool IsActionHeld { get; set; }
         public bool IsConcentrating { get; set; }
+        public bool DealDamage { get; set; }
         public string? AdditionalStateInformation { get; set; }
 
         public string Name { get; }
