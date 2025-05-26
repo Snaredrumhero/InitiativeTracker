@@ -9,13 +9,26 @@ namespace InitiativeTracker
     public class UndoData
     {
         // List of what needs to be stored to remake the game
-        // List of players and enemies (HP, Temp HP, Max HP?, Initiative, Action Held, Concentrating)
+        // List of players and enemies (HP, Temp HP, Max HP?, Initiative, Action Held, Concentrating) ID for each combatant???
+        // -- We need to figure out how to store the combatants in a way that we can reidntify them later
         // Global Initiative
         // Global Turn Counter
 
         public UndoData(List<CombatantUndo> constructCombatants, int constructCurrentInitiative, int constructGlobalTurnCounter) 
         { 
             Combatants = constructCombatants;
+            CurrentInitiative = constructCurrentInitiative;
+            GlobalTurnCounter = constructGlobalTurnCounter;
+        }
+
+        public UndoData(IEnumerable<ICombatant> constructCombatants, int constructCurrentInitiative, int constructGlobalTurnCounter)
+        {
+            List<CombatantUndo> CombatantsList = new List<CombatantUndo>();
+            foreach (ICombatant combatant in constructCombatants)
+            {
+                CombatantsList.Add(new CombatantUndo(combatant.Initiative, combatant.MaxHealth, combatant.TemporaryHealth, combatant.IsActionHeld, combatant.IsConcentrating));
+            }
+            Combatants = CombatantsList;
             CurrentInitiative = constructCurrentInitiative;
             GlobalTurnCounter = constructGlobalTurnCounter;
         }

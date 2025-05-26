@@ -72,8 +72,8 @@ namespace InitiativeTracker
 
 
             // Testing Undo Stack
-            List<CombatantUndo> UndoPlayersList = new List<CombatantUndo>;
-            foreach (Player player in Players) 
+            List<CombatantUndo> UndoPlayersList = new List<CombatantUndo> { };
+            foreach (Player player in Players)
             {
                 if (player == null)
                 {
@@ -103,13 +103,13 @@ namespace InitiativeTracker
             // https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections?view=netframeworkdesktop-4.8
             //Compute required rows
             int numCols = (Players.Count / 7) + 1;
-            
+
 
             //Create needed rows and populate with controls
             //Set all unused rows and controls to be invisible and disabled
             //Loop over rows and populate data
             throw new NotImplementedException();
-            
+
         }
         // Highlight the player whose turn it is
         private void HighlightPlayer()
@@ -128,4 +128,5 @@ namespace InitiativeTracker
         }
 
     }
+}
     
